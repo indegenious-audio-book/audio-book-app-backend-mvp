@@ -31,3 +31,24 @@ python manage.py runserver
 ```
 
 5. You should be able to see the api on the browser at `http://127.0.0.1:8000/api/v1/books/`. Create the list of books and then check the api.
+
+## check tables on the database
+
+```
+ ~/o/a/audio-book-app-backend-mvp   …  sqlite3 db.sqlite3 
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter ".help" for usage hints.
+sqlite> .tables
+auth_group                  django_admin_log          
+auth_group_permissions      django_content_type       
+auth_permission             django_migrations         
+auth_user                   django_session            
+auth_user_groups            quickstart_books          
+auth_user_user_permissions  quickstart_chapters       
+sqlite> .tables 'quick%'
+quickstart_books     quickstart_chapters
+sqlite> 
+sqlite> select * from quickstart_books;
+1|Cosmology in Vedanta: The Physics Correlation|C Radhakrishnan, Gopal K.R.|2017
+2|The last man|Mary Wollstonecraft Shelley|1826
+```
