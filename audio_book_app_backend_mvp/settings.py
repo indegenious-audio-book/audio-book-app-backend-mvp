@@ -25,7 +25,7 @@ SECRET_KEY = '4b4mow5xel4@4#a0rmhf7eu+r5@#_@5+s4h3^w42du1%6mkb&6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["hypert.space", '34.93.249.161', '127.0.0.1']
 
 
 # Application definition

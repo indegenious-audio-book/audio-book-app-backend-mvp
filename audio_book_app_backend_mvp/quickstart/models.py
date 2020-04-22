@@ -6,6 +6,8 @@ class Books(models.Model):
     book_title = models.CharField(max_length=100)
     author_name = models.CharField(max_length=100)
     published_year = models.IntegerField()
+    folder_name = models.CharField(max_length=100)
+    number_of_episodes = models.IntegerField()
 
 
 class Chapters(models.Model):
