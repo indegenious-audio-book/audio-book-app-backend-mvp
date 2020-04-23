@@ -8,6 +8,7 @@ class Books(models.Model):
     published_year = models.IntegerField()
     folder_name = models.CharField(max_length=100)
     genre = models.IntegerField()
+    number_of_chapters = models.IntegerField()
 
 
 class Chapters(models.Model):
