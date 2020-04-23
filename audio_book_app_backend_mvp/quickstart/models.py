@@ -7,12 +7,18 @@ class Books(models.Model):
     author_name = models.CharField(max_length=100)
     published_year = models.IntegerField()
     folder_name = models.CharField(max_length=100)
+    genre = models.IntegerField()
 
 
 class Chapters(models.Model):
     chapter_id = models.IntegerField(primary_key=True)
     chapter_title = models.CharField(max_length=100)
     book = models.ForeignKey(Books, on_delete=models.CASCADE)
+
+
+class Genres(models.Model):
+    genre_id = models.IntegerField(primary_key=True)
+    genre_name = models.CharField(max_length=100)
 
 
 
