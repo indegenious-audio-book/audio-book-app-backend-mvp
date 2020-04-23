@@ -6,7 +6,7 @@ from . import models
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Books
-        fields = ('book_id', 'book_title', 'author_name', 'published_year')
+        fields = ('book_id', 'book_title', 'author_name', 'published_year', 'folder_name')
 
 
 class ChaptersSerializer(serializers.HyperlinkedModelSerializer):
