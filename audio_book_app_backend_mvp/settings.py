@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4b4mow5xel4@4#a0rmhf7eu+r5@#_@5+s4h3^w42du1%6mkb&6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["hypert.space", '34.93.249.161']
 
 
 # Application definition
