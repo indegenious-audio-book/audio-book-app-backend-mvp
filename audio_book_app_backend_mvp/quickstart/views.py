@@ -12,3 +12,12 @@ class BooksViewSet(viewsets.ModelViewSet):
     queryset = models.Books.objects.all()
     serializer_class = serializers.BookSerializer
     #permission_classes = [permissions.IsAuthenticated]
+
+
+class GenresViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that lets users view all the books
+    """
+    queryset = models.Genres.objects.all()
+    serializer_class = serializers.BookSerializer
+    #permission_classes = [permissions.IsAuthenticated]
