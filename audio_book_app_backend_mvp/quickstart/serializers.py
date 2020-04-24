@@ -13,3 +13,9 @@ class ChaptersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Chapters
         fields = ('chapter_id', 'chapter_title', 'book')
+
+
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Books
+        fields = ('genre', )
