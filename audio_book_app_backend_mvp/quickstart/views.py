@@ -15,6 +15,13 @@ class BooksViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.BookSerializer
     #permission_classes = [permissions.IsAuthenticated]
 
+    def get_queryset(self):
+        queryset = models.Books.objects.all()
+        genre = self.request.query_params.get('genre', None)
+        if genre is not None:
+            queryset = queryset.filter(genre=genre)
+        return queryset
+
 
 class GenresViewSet(viewsets.ModelViewSet):
     """
@@ -23,19 +30,3 @@ class GenresViewSet(viewsets.ModelViewSet):
     queryset = models.Books.objects.order_by().values('genre').distinct()
     serializer_class = serializers.GenreSerializer
     #permission_classes = [permissions.IsAuthenticated]
-
-
-#class BooksForGenresList(generics.ListAPIView):
-class BooksForGenresList(viewsets.ModelViewSet):
-    """
-    API endpoint for the list of books in a genre
-    """
-    serializer_class = serializers.BookSerializer
-
-    def get_queryset(self):
-        queryset = models.Books.objects.all()
-        genre = self.request.query_params.get('genre', None)
-        if genre is not None:
-            queryset = queryset.filter(genre=genre)
-        return queryset
-

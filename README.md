@@ -52,3 +52,10 @@ sqlite> select * from quickstart_books;
 1|Cosmology in Vedanta: The Physics Correlation|C Radhakrishnan, Gopal K.R.|2017
 2|The last man|Mary Wollstonecraft Shelley|1826
 ```
+
+## views
+
+* http://127.0.0.1:8000/api/v1/
+* http://127.0.0.1:8000/api/v1/books/
+* http://127.0.0.1:8000/api/v1/books/1 .. 2 and so on for the books
+* http://127.0.0.1:8000/api/v1/books/?genre=2 for the genres
