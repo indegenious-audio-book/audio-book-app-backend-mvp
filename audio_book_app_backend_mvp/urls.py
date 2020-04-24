@@ -20,6 +20,7 @@ from audio_book_app_backend_mvp.quickstart import views
 
 router = routers.DefaultRouter()
 router.register(r'books', views.BooksViewSet)
+router.register(r'genres', views.GenresViewSet)
 
 urlpatterns = [
     path('api/v1/',  include(router.urls)),
