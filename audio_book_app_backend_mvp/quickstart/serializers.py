@@ -18,4 +18,4 @@ class ChaptersSerializer(serializers.HyperlinkedModelSerializer):
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Books
-        fields = ['genre']
+        fields = ('genre', )
