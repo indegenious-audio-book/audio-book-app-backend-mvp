@@ -59,3 +59,7 @@ sqlite> select * from quickstart_books;
 * http://127.0.0.1:8000/api/v1/books/
 * http://127.0.0.1:8000/api/v1/books/1 .. 2 and so on for the books
 * http://127.0.0.1:8000/api/v1/books/?genre=2 for the genres
+
+# docs
+
+we will get list of genres in this [genres.md](genres.md)
