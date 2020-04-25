@@ -64,4 +64,4 @@ sqlite> select * from quickstart_books;
 
 # docs
 
-we will get list of genres in this [genres.md](genres.md)
+we will get list of genres in this [genres.md](genres_list.md)
