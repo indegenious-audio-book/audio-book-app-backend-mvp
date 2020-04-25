@@ -15,6 +15,7 @@ class Chapters(models.Model):
     chapter_id = models.IntegerField(primary_key=True)
     chapter_title = models.CharField(max_length=100)
     book = models.ForeignKey(Books, on_delete=models.CASCADE)
+    chapter_url = models.CharField(max_length=100)
 
 
 class Genres(models.Model):
