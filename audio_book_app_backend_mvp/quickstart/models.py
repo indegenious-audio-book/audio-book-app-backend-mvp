@@ -9,6 +9,7 @@ class Books(models.Model):
     folder_name = models.CharField(max_length=100)
     genre = models.IntegerField()
     number_of_chapters = models.IntegerField()
+    thumbnail_url = models.CharField(max_length=100)
 
 
 class Chapters(models.Model):
