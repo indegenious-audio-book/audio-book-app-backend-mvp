@@ -10,7 +10,7 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ChaptersSerializer(serializers.ModelSerializer):
-    book = serializers.RelatedField(source='book.book_id', read_only=True)
+    book = serializers.IntegerField(source='book.book_id', read_only=True)
 
     class Meta:
         model = models.Chapters
