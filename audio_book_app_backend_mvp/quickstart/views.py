@@ -36,13 +36,13 @@ class ChaptersViewSet(viewsets.ModelViewSet):
     """
     API endpoint that lets users view chapters for the books
     """
-    queryset = models.Chapters
+    queryset = models.Chapters.objects.all()
     serializer_class = serializers.ChaptersSerializer
     #permission_classes = [permissions.IsAuthenticated]
 
-    #def get_queryset(self):
-    #    queryset = models.Books.objects.all()
-    #    genre = self.request.query_params.get('genre', None)
-    #    if genre is not None:
-    #        queryset = queryset.filter(genre=genre)
-    #    return queryset
+    def get_queryset(self):
+        queryset = models.Chapters.objects.all()
+        book = self.request.query_params.get('book', None)
+        if book is not None:
+            queryset = queryset.filter(book=book)
+        return queryset

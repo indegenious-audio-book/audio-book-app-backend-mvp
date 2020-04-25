@@ -9,7 +9,9 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('book_id', 'book_title', 'author_name', 'published_year', 'folder_name', 'genre', 'number_of_chapters')
 
 
-class ChaptersSerializer(serializers.HyperlinkedModelSerializer):
+class ChaptersSerializer(serializers.ModelSerializer):
+    book = serializers.RelatedField(source='book.book_id', read_only=True)
+
     class Meta:
         model = models.Chapters
         fields = ('chapter_id', 'chapter_title', 'book')
