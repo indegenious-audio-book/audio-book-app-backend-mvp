@@ -9,7 +9,7 @@ Table = namedtuple('Table', ['csvfile', 'table_name', 'table_cols'])
 ##########################################
 ALL_TABLES = [
     Table('./data/quickstart_books.csv', 'quickstart_books', ['book_id','book_title','author_name','published_year','folder_name','genre','number_of_chapters','thumbnail_url']),
-    Table('./data/quickstart_chapters.csv', 'quickstart_chapters', ['chapter_id','chapter_title','book_id','chapter_url']),
+    Table('./data/quickstart_chapters.csv', 'quickstart_chapters', ['chapter_id','chapter_title','book_id','chapter_url', 'chapter_number']),
 ]
 
 
