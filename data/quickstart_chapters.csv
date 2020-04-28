@@ -1,7 +1,7 @@
-chapter_id,chapter_title,book_id,chapter_url
-1,"The Frogs & the Ox",1,"aesop_fables/ch_001.mp3"
-2,"Belling the Cat",1,"aesop_fables/ch_001.mp3"
-3,"The Town Mouse & the Country Mouse",1,"aesop_fables/ch_001.mp3"
-4,"The Fox & the Grapes",1,"aesop_fables/ch_001.mp3"
-5,"The Wolf & the Crane",1,"aesop_fables/ch_001.mp3"
-6,"The Lion & the Mouse",1,"aesop_fables/ch_001.mp3"
+chapter_id,chapter_title,book_id,chapter_url,chapter_number
+1,"The Frogs & the Ox",1,"aesop_fables/ch_001.mp3",1
+2,"Belling the Cat",1,"aesop_fables/ch_001.mp3",2
+3,"The Town Mouse & the Country Mouse",1,"aesop_fables/ch_001.mp3",3
+4,"The Fox & the Grapes",1,"aesop_fables/ch_001.mp3",4
+5,"The Wolf & the Crane",1,"aesop_fables/ch_001.mp3",5
+6,"The Lion & the Mouse",1,"aesop_fables/ch_001.mp3",6
