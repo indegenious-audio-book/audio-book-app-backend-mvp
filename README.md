@@ -65,3 +65,110 @@ sqlite> select * from quickstart_books;
 # docs
 
 we will get list of genres in this [genres.md](genres_list.md)
+
+# flow for user for genres
+
+1. user will go to home page. app will make genres call and will list all the genres
+
+```curl http://34.93.249.161:8000/api/v1/genres/```
+
+this will fetch all the list of genres. lets say the output is below.
+
+```
+{"count":2,"next":null,"previous":null,"results":[{"genre":5},{"genre":22}]}
+```
+
+so we have overall two genres 5 and 22.
+
+2. once i have the list of genres, i will get the list of books of that genre. lets say the user wants 5. so user will click on 5 and app will make the next api call
+
+```curl http://34.93.249.161:8000/api/v1/books/?genres=5```
+
+the output for this is
+
+```
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "book_id": 1,
+      "book_title": "Aesop Fables",
+      "author_name": "Aesop",
+      "published_year": 1484,
+      "folder_name": "aesop_fables",
+      "genre": 5,
+      "number_of_chapters": 240,
+      "thumbnail_url": "aesop_fables.jpg"
+    },
+    {
+      "book_id": 2,
+      "book_title": "Twenty Thousand Leagues Under the Sea",
+      "author_name": "Jules Verne",
+      "published_year": 1870,
+      "folder_name": "twenty_thousand_leagues_under_the_sea",
+      "genre": 22,
+      "number_of_chapters": 24,
+      "thumbnail_url": "twenty_thousand_leagues_under_the_sea.jpg"
+    }
+  ]
+}
+```
+
+so we have two books: 1 and 2.
+
+3. now user will click on the book, which will move on to the player and the player will have the chapter list. to get the list of chapters, app will make the below call
+
+```curl http://34.93.249.161:8000/api/v1/chapters/?book=1&format=json```
+
+and output will be
+
+```
+{
+  "count": 6,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "chapter_id": 1,
+      "chapter_title": "The Frogs & the Ox",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    },
+    {
+      "chapter_id": 2,
+      "chapter_title": "Belling the Cat",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    },
+    {
+      "chapter_id": 3,
+      "chapter_title": "The Town Mouse & the Country Mouse",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    },
+    {
+      "chapter_id": 4,
+      "chapter_title": "The Fox & the Grapes",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    },
+    {
+      "chapter_id": 5,
+      "chapter_title": "The Wolf & the Crane",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    },
+    {
+      "chapter_id": 6,
+      "chapter_title": "The Lion & the Mouse",
+      "book": 1,
+      "chapter_url": "aesop_fables/ch_001.mp3"
+    }
+  ]
+}
+```
+
+the above is the list of chapters
+
