@@ -1,5 +1,6 @@
 book_id,book_title,author_name,published_year,folder_name,genre,number_of_chapters,thumbnail_url
 1,"Aesop Fables",Aesop,1484,aesop_fables,5,240,"aesop_fables.jpg"
 2,"Twenty Thousand Leagues Under the Sea","Jules Verne",1870,twenty_thousand_leagues_under_the_sea,22,24,twenty_thousand_leagues_under_the_sea.jpg
-3,"Pather Pachali","Bibhutibhushan Bandapadhyay",1929,pather_pachali,9,3,pather_pachali.png
+3,"Pather Pachali","Bibhutibhushan Bandapadhyay",1929,pather_pachali,9,3,pather_pachali.jpg
 4,"Putulnacher Itikotha","Manik Bandapadhyay",1935,putulnacher_itikotha,9,1,putulnacher_itikotha.jpg
+5,"Mismider Koboch","Bibhutibhushan Bandapadhyay",2018,mismider_koboch,9,1,mismider_koboch.jpg
