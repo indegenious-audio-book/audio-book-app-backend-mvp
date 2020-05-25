@@ -14,7 +14,8 @@ class Books(models.Model):
 
 class Chapters(models.Model):
     chapter_id = models.IntegerField(primary_key=True)
-    chapter_title = models.CharField(max_length=100)
+    chapter_title_english = models.CharField(max_length=100)
+    chapter_title_vernacular = models.CharField(max_length=100)
     book = models.ForeignKey(Books, on_delete=models.CASCADE)
     chapter_url = models.CharField(max_length=100)
     chapter_number = models.IntegerField()

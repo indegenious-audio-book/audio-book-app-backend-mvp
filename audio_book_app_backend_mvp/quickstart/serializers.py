@@ -14,7 +14,7 @@ class ChaptersSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Chapters
-        fields = ('chapter_id', 'chapter_title', 'book', 'chapter_url', 'chapter_number')
+        fields = ('chapter_id', 'chapter_title_english', 'chapter_title_vernacular', 'book', 'chapter_url', 'chapter_number')
 
 
 class GenreSerializer(serializers.ModelSerializer):
