@@ -1,5 +1,6 @@
 book_id,book_title,author_name,published_year,folder_name,genre,number_of_chapters,thumbnail_url
-3,"Pather Pachali","Bibhutibhushan Bandapadhyay",1929,pather_pachali,9,3,pather_pachali.jpg
-4,"Putulnacher Itikotha","Manik Bandapadhyay",1935,putulnacher_itikotha,9,1,putulnacher_itikotha.jpg
-5,"Mismider Koboch","Bibhutibhushan Bandapadhyay",2018,mismider_koboch,9,1,mismider_koboch.jpg
-6,"শিয়াল পণ্ডিত ও আরো গল্প","Upendrakishore Raychoudhary",1900,sheyal_pandit,5,3,sheyal_pandit_o_aro_golpo.jpg
+3,"Pather Pachali - পথের পাঁচালী","Bibhutibhushan Bandapadhyay",1929,pather_pachali,9,35,pather_pachali.jpg
+4,"Putulnacher Itikotha - পুতুলনাচের ইতিকথা","Manik Bandapadhyay",1935,putulnacher_itikotha,9,1,putulnacher_itikotha.jpg
+5,"Mismider Koboch - মিসমিদের কবচ","Bibhutibhushan Bandapadhyay",2018,mismider_koboch,1,1,mismider_koboch.jpg
+6,"The clever fox and other stories - শিয়াল পণ্ডিত ও আরো গল্প","Upendrakishore Raychoudhary",1900,sheyal_pandit,5,3,sheyal_pandit_o_aro_golpo.jpg
+7,"The Mountain of the Moon - চাঁদের পাহাড়"," Bibhutibhushan Bandyopadhyay",1937,chader_pahar,1,16,chader_pahar.jpg
