@@ -18,8 +18,11 @@ class BooksViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = models.Books.objects.all()
         genre = self.request.query_params.get('genre', None)
+        author = self.request.query_params.get('author', None)
         if genre is not None:
             queryset = queryset.filter(genre=genre)
+        if author is not None:
+            queryset = queryset.filter(author_name=author)
         return queryset
 
 
