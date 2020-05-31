@@ -64,6 +64,8 @@ sqlite> select * from quickstart_books;
 * curl "http://127.0.0.1:8000/api/v1/books/?author=Bibhutibhushan_Bandapadhyay" | python -m json.tool for the list of all the books under this author.
 * http://127.0.0.1:8000/api/v1/books/?auhor=2 for the authors
 * http://127.0.0.1:8000/api/v1/chapters/?book=1 for getting the list of chapters for the book
+* http://34.93.249.161:8000/api/v1/books/?latest=1 for getting the latest n values of the book.
+
 
 # docs
 
