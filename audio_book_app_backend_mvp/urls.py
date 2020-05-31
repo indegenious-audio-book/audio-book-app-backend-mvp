@@ -21,6 +21,7 @@ from audio_book_app_backend_mvp.quickstart import views
 router = routers.DefaultRouter()
 router.register(r'books', views.BooksViewSet)
 router.register(r'genres', views.GenresViewSet)
+router.register(r'authors', views.AuthorsViewSet)
 router.register(r'chapters', views.ChaptersViewSet)
 
 urlpatterns = [

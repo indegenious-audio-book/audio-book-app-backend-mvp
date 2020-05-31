@@ -32,6 +32,15 @@ class GenresViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated]
 
 
+class AuthorsViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that lets users view all the books
+    """
+    queryset = models.Books.objects.order_by().values('author_name').distinct()
+    serializer_class = serializers.GenreSerializer
+    #permission_classes = [permissions.IsAuthenticated]
+
+
 class ChaptersViewSet(viewsets.ModelViewSet):
     """
     API endpoint that lets users view chapters for the books
