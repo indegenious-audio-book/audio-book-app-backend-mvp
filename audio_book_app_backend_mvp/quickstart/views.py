@@ -16,13 +16,14 @@ class BooksViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        queryset = models.Books.objects.all()
+        queryset = models.Books.objects.order_by().all()
         genre = self.request.query_params.get('genre', None)
         author = self.request.query_params.get('author', None)
         if genre is not None:
             queryset = queryset.filter(genre=genre)
         if author is not None:
-            queryset = queryset.filter(author_name=author)
+            author = author.replace("_", " ")
+            queryset = queryset.order_by().order_by().filter(author_name=author)
         return queryset
 
 
@@ -40,7 +41,7 @@ class AuthorsViewSet(viewsets.ModelViewSet):
     API endpoint that lets users view all the books
     """
     queryset = models.Books.objects.order_by().values('author_name').distinct()
-    serializer_class = serializers.GenreSerializer
+    serializer_class = serializers.AuthorsSerializer
     #permission_classes = [permissions.IsAuthenticated]
 
 
@@ -48,7 +49,7 @@ class ChaptersViewSet(viewsets.ModelViewSet):
     """
     API endpoint that lets users view chapters for the books
     """
-    queryset = models.Chapters.objects.all()
+    queryset = models.Chapters.objects.order_by().all()
     serializer_class = serializers.ChaptersSerializer
     #permission_classes = [permissions.IsAuthenticated]
 
@@ -56,5 +57,5 @@ class ChaptersViewSet(viewsets.ModelViewSet):
         queryset = models.Chapters.objects.all()
         book = self.request.query_params.get('book', None)
         if book is not None:
-            queryset = queryset.filter(book=book)
+            queryset = queryset.order_by().filter(book=book)
         return queryset
