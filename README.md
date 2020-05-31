@@ -60,6 +60,7 @@ sqlite> select * from quickstart_books;
 * http://127.0.0.1:8000/api/v1/books/1 .. 2 and so on for the books
 * http://127.0.0.1:8000/api/v1/genres/ for the list of genres
 * http://127.0.0.1:8000/api/v1/books/?genre=2 for the genres
+* http://127.0.0.1:8000/api/v1/books/?auhor=2 for the authors
 * http://127.0.0.1:8000/api/v1/chapters/?book=1 for getting the list of chapters for the book
 
 # docs
@@ -139,30 +140,6 @@ and output will be
     {
       "chapter_id": 2,
       "chapter_title": "Belling the Cat",
-      "book": 1,
-      "chapter_url": "aesop_fables/ch_001.mp3"
-    },
-    {
-      "chapter_id": 3,
-      "chapter_title": "The Town Mouse & the Country Mouse",
-      "book": 1,
-      "chapter_url": "aesop_fables/ch_001.mp3"
-    },
-    {
-      "chapter_id": 4,
-      "chapter_title": "The Fox & the Grapes",
-      "book": 1,
-      "chapter_url": "aesop_fables/ch_001.mp3"
-    },
-    {
-      "chapter_id": 5,
-      "chapter_title": "The Wolf & the Crane",
-      "book": 1,
-      "chapter_url": "aesop_fables/ch_001.mp3"
-    },
-    {
-      "chapter_id": 6,
-      "chapter_title": "The Lion & the Mouse",
       "book": 1,
       "chapter_url": "aesop_fables/ch_001.mp3"
     }
